@@ -1,0 +1,13 @@
+{
+  "id": "hipchat",
+  "title": "Hipchat",
+  "icon": "icon.png",
+  "type": "job",
+  "webapp": "lib/webapp.js",
+  "worker": "lib/worker.js",
+  "config": {
+    "controller": "HipchatController",
+    "script": "config/config.js",
+    "template": "config/config.html"
+  }
+}

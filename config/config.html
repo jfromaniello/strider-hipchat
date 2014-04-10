@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title></title>
+</head>
+
+<body>
+  <div id="hipchat" class="tab-pane well">
+    <fieldset>
+      <legend>Hipchat Notifications</legend>
+
+      <p>Configure your <a href="http://hipchat.com">Hipchat</a> account and message
+      notifications to send on build events.</p>
+
+      <p>A Hipchat group admin must <a href="https://hipchat.com/admin/api">generate an
+      authToken</a> to use.</p>
+
+      <p>You can find the <strong>numeric</strong> room id for a given room by following
+      <a href="https://hipchat.com/rooms">these links</a>.</p>
+
+      <input type="text" ng-model="options.serverUrl" placeholder="https://my-strider-server.com">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Auth Token</th>
+
+            <th>Room ID</th>
+
+            <th>Send From</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><input type="text" ng-model="options.authToken" placeholder=""></td>
+
+            <td><input type="text" ng-model="options.roomId" placeholder=""></td>
+
+            <td><input type="text" ng-model="options.from" placeholder="Strider"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event</th>
+
+            <th>Color</th>
+
+            <th>Message</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>Start</strong></td>
+
+            <td><select ng-model="options.startColor">
+              <option value="yellow">
+                Yellow
+              </option>
+
+              <option value="red">
+                Red
+              </option>
+
+              <option value="green">
+                Green
+              </option>
+
+              <option value="purple">
+                Purple
+              </option>
+
+              <option value="gray">
+                Gray
+              </option>
+
+              <option value="random">
+                Random
+              </option>
+            </select></td>
+
+            <td>
+            <textarea ng-model="options.startMessage"
+                      placeholder="${name} has started a <a href='${job}'>${type}</a> run..."></textarea></td>
+          </tr>
+
+          <tr>
+            <td><strong>Pass</strong></td>
+
+            <td><select ng-model="options.passColor">
+              <option value="yellow">
+                Yellow
+              </option>
+
+              <option value="red">
+                Red
+              </option>
+
+              <option value="green">
+                Green
+              </option>
+
+              <option value="purple">
+                Purple
+              </option>
+
+              <option value="gray">
+                Gray
+              </option>
+
+              <option value="random">
+                Random
+              </option>
+            </select></td>
+
+            <td>
+            <textarea ng-model="options.passMessage"
+                      placeholder="${name} has finished <a href='${job}'>okay</a>..."></textarea></td>
+          </tr>
+
+          <tr>
+            <td><strong>Failure</strong></td>
+
+            <td><select ng-model="options.failColor">
+              <option value="yellow">
+                Yellow
+              </option>
+
+              <option value="red">
+                Red
+              </option>
+
+              <option value="green">
+                Green
+              </option>
+
+              <option value="purple">
+                Purple
+              </option>
+
+              <option value="gray">
+                Gray
+              </option>
+
+              <option value="random">
+                Random
+              </option>
+            </select></td>
+
+            <td>
+            <textarea ng-model="options.failMessage"
+                      placeholder="${name} has <a href='${job}'>failed</a>..."></textarea></td>
+          </tr>
+        </tbody>
+      </table><button ng-click="save()" class="btn btn-success">Save notifications</button>
+    </fieldset>
+  </div>
+</body>
+</html>
