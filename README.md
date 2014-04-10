@@ -1,6 +1,6 @@
 This is an [StriderCD](http://stridercd.com) plugin that sends notifications to hipchat.
 
-I started from [strider-hipchat](https://github.com/logankoester/strider-hipchat).
+I started from [logankoester/strider-hipchat](https://github.com/logankoester/strider-hipchat).
 
 ## Installation
 
