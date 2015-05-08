@@ -1,11 +1,18 @@
 {
   "name": "strider-hipchat",
-  "version": "1.0.1",
   "description": "A Strider CD Plugin to notify Hipchat of project build status",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jfromaniello/strider-hipchat.git"
+  "version": "1.0.1",
+  "author": "Logan Koester",
+  "bugs": {
+    "url": "https://github.com/jfromaniello/strider-hipchat/issues"
+  },
+  "contributors": [
+    "Jose F. Romaniello <jfromaniello@gmail.com> (http://joseoncode.com)",
+    "Marcus Pöhls <marcus@futurestud.io> (https://futurestud.io/blog/author/marcus)"
+  ],
+  "dependencies": {
+    "lodash.template": "^2.4.1",
+    "node-hipchat": "^0.4.5"
   },
   "keywords": [
     "strider",
@@ -20,16 +27,23 @@
     "hipchat",
     "plugin"
   ],
-  "author": "Logan Koester",
-  "contributors": [
-    "Jose F. Romaniello <jfromaniello@gmail.com> (http://joseoncode.com)"
-  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jfromaniello/strider-hipchat/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfromaniello/strider-hipchat.git"
   },
-  "dependencies": {
-    "lodash.template": "^2.4.1",
-    "node-hipchat": "^0.4.5"
+  "scripts": {},
+  "strider": {
+    "id": "hipchat",
+    "title": "HipChat",
+    "icon": "icon.png",
+    "type": "job",
+    "webapp": "lib/webapp.js",
+    "worker": "lib/worker.js",
+    "config": {
+      "controller": "HipchatController",
+      "script": "config/config.js",
+      "template": "config/config.html"
+    }
   }
 }
