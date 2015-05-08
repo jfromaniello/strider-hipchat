@@ -1,7 +1,7 @@
 {
   "name": "strider-hipchat",
   "description": "A Strider CD Plugin to notify Hipchat of project build status",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Logan Koester",
   "bugs": {
     "url": "https://github.com/jfromaniello/strider-hipchat/issues"
